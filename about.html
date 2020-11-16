@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于茶之居网站</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- 自定义的样式一般放在后面 -->
+    <style>
+        .box {
+            height: 220px;
+            /* background-color: blueviolet; */
+            border: 1px solid white;
+            color: white;
+            align-content: center;
+        }
+        .timeline-section {
+            position: relative;
+        }
+        .timeline-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            /* 线居中 */
+            left: 50%; 
+            /* 把线向左拉一点，真正实现居中 */
+            transform: translate(-50%);
+            background-color: rgb(141, 136, 136);
+        }
+        /* 时间轴上的点，放在对应的row上 */
+        .timeline-pointer {
+            position: relative;
+        }
+        .timeline-pointer::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 3px solid #ccc;
+            left: 50%; 
+            transform: translate(-50%);
+            background-color: #fff;
+            z-index: 1;
+        }
+        @media (max-width: 576px)
+        {
+            .timeline-section::after,
+            .timeline-pointer::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="http://chazhiju.com/">茶之居</a></li>
+            <li class="breadcrumb-item active" aria-current="page">关于</li>
+            </ol>
+        </nav>
+        <div class="timeline-section">
+            <div class="row my-3 timeline-pointer">
+                <div class="col-sm-6">
+                    <h3>2020年11月网站上线</h3>
+                    <p>茶之居是（chazhiju.com）面向全网，服务于茶人、茶叶投资人的网站。网站采用自适应技术，可以通过手机、平板、电脑访问。目前使用github的空间，在国内访问会比较慢。</p>
+                    <p>网站上线了茶人茶语、茶叶投资人、茶叶三个频道，收录了投资人徐韬、白水清；茶人范和钧、邹炳良、吕杨阳；茶叶书籍《茶的品格：中国茶诗新解》。</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box"><img class="img-fluid" src="images/a01.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="row my-3 timeline-pointer flex-row-reverse">
+                <div class="col-sm-6">
+                    <h3>茶之居想做什么？ </h3>
+                    <p>饮茶粤海未能忘，索句渝州叶正黄。三十一年还旧国，落花时节读华章。牢骚太盛防肠断，风物长宜放眼量。莫道昆明池水浅，观鱼胜过富春江。</p>
+                    <p>《七律·和柳亚子先生》是近代诗人毛泽东于1949年4月19日所写的一首诗，毛泽东是一个酷爱喝茶的人。茶的故事很多，作为一个非茶人做的茶相关网站，我会更关注茶的故事。 </p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="box"><img class="img-fluid" src="images/a02.jpg" alt=""></div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>
